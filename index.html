@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"> 
+	<title>DJ GAMBY - Spanish EDM Producer</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+<body>
+	<header id="header">
+		<span class="bg1"></span>
+		<span class="bg2"></span>
+		<span class="bg3"></span>
+		<h1>DJ GAMBY</h1>
+		<a href="#content" class="scroll" id="content" onclick="scrollTrigger();"></a>
+	</header>
+	<div class="menu page" id="menu">
+		<a class="active" id="menu-home" onclick="setActive('menu-home');" href="#">
+			<i class="fas fa-home"></i> <span>Home</span>
+		</a>
+		<a id="menu-new" onclick="setActive('menu-new');" href="#new">
+			<i class="fas fa-star"></i> <span>New</span>
+		</a>
+		<a id="menu-songs" onclick="setActive('menu-songs');" href="#songs">
+			<i class="fas fa-record-vinyl"></i> <span>Songs</span>
+		</a>
+		<a id="menu-contact" onclick="setActive('menu-contact');" href="#contact">
+			<i class="fas fa-user"></i> <span>Contact</span>
+		</a>
+	</div>
+	<div class="content">
+		<section class="subtitle">
+			<h1>Spanish EDM, Hardstyle and Hardcore producer.</h1>
+			<a href="https://open.spotify.com/artist/4bCL1SYSOfDQ6rTJh8ehsB"><i class="fab fa-spotify"></i></a>
+			<a href="https://www.youtube.com/channel/UCgUl7FrwU8dzpV4uRQKRnww"><i class="fab fa-youtube"></i></a>
+		</section>
+		<section id="new">
+			<h1>New</h1>
+			<iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2FDJGaMbY%2Fdj-gamby-sessions-1-april-2020%2F" frameborder="0" ></iframe>
+		</section>
+		<section class="songs">
+			<h1>Songs</h1>
+			<div class="pick">
+				<h1>Artist's pick</h1>
+				<iframe src="https://open.spotify.com/embed/album/5cT90I0tZNECdRP9zLgYUP" width="100%" height="180" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+			</div>
+			<iframe src="https://open.spotify.com/embed/album/14vtCnXWo77U3gbkCQ0BU7" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+			<iframe src="https://open.spotify.com/embed/album/13OV5DdSqKcLMiPE6GffZY" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+			<iframe src="https://open.spotify.com/embed/album/1hZEhVrShlwUDzEHZ1Fsn4" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+			<iframe src="https://open.spotify.com/embed/album/35Y4uZFB2g0y2nvk3EesuF" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+			<iframe src="https://open.spotify.com/embed/album/7D6cGj6451BRIjr9Em85Sb" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+			<iframe src="https://open.spotify.com/embed/album/7JLqlMccGcDn1wHj4IOQPT" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+			<iframe src="https://open.spotify.com/embed/album/6i7ANOxAAE9WcURqsqZzof" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+		</section>
+	</div>
+	<footer>
+		<p>&#169; DJ GAMBY 2020. Todos los derechos reservados. Diseñada por <a href="https://alvaro.ga/">Álvaro Galisteo</a></p>
+	</footer>
+
+</body>
+<script src="https://kit.fontawesome.com/7465cf6e1c.js" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	var active = "menu-home";
+	document.getElementById("menu").classList.remove('page');
+	function scrollTrigger(){
+    	if(window.pageYOffset > window.innerHeight/3){
+    		document.getElementById("menu").classList.add('page');
+    	}
+    	if(window.pageYOffset < window.innerHeight/3){
+    		document.getElementById("menu").classList.remove('page');
+    	}
+	}
+	window.onscroll = scrollTrigger
+
+	function setActive(id){
+		document.getElementById(active).classList.remove('active');
+		active = id;
+		document.getElementById(active).classList.add('active');
+	}
+</script>
+</html>
